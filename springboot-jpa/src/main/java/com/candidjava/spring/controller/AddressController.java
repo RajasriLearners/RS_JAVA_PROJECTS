@@ -30,7 +30,8 @@ public class AddressController {
 	AddressService addressService;
 	
 	@PostMapping(value = "/create", headers = "Accept=application/json")
-	public ResponseEntity<Void> createAddress(@RequestBody Address address, UriComponentsBuilder ucBuilder) {
+	//@RequestBody changed to @ModelAttribute.
+	public ResponseEntity<Void> createAddress(@ModelAttribute Address address, UriComponentsBuilder ucBuilder) {
 		System.out.println("Creating Address " + address.getAddressLine1()+address.getAddressLine2()+address.getStreet()+address.getCity()+address.getState()+address.getZip());
 		addressService.createAddress(address);
 		HttpHeaders headers = new HttpHeaders();
