@@ -24,7 +24,7 @@ public class Address {
 	public void setAddressLine1(String addressLine1) {
 		this.addressLine1 = addressLine1;
 	}
-
+//this is for get address
 	public String getAddressLine2() {
 		return addressLine2;
 	}
